@@ -12,7 +12,7 @@ await mkdir(IMG, { recursive: true });
 
 const data = JSON.parse(await readFile(join(ROOT, "data/products.json"), "utf8"));
 
-const NAVY = "#0b2239", NAVY2 = "#13304f", AMBER = "#f5a623";
+const DARK = "#1b1d22", DARK2 = "#3a0a0e", AMBER = "#c8000a";
 const bolt = "M13 2L4.5 13.5H11l-1 8.5 8.5-11.5H12l1-8.5z";
 
 /* grid-pattern + diagonal-sheen background shared by all tiles */
@@ -20,8 +20,8 @@ function bg(w, h, id) {
   return `
     <defs>
       <linearGradient id="g${id}" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0" stop-color="${NAVY}"/>
-        <stop offset="1" stop-color="${NAVY2}"/>
+        <stop offset="0" stop-color="${DARK}"/>
+        <stop offset="1" stop-color="${DARK2}"/>
       </linearGradient>
       <pattern id="p${id}" width="40" height="40" patternUnits="userSpaceOnUse">
         <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
@@ -53,6 +53,13 @@ function hero(w = 1600, h = 760) {
 }
 
 const esc = (s) => s.replace(/&/g, "&amp;");
+
+/* favicon — red bulb/bolt on transparent, echoes the logo mark */
+const favicon = `<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24">
+  <rect width="24" height="24" rx="5" fill="#1b1d22"/>
+  <path d="${bolt}" fill="#c8000a"/>
+</svg>`;
+await writeFile(join(IMG, "favicon.svg"), favicon, "utf8");
 
 /* hero */
 await writeFile(join(IMG, "hero.svg"), hero(), "utf8");
