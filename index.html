@@ -40,7 +40,8 @@
     "url": "https://powersolutions-sa.com",
     "telephone": "+966554557220",
     "email": "info@powersolutions-sa.com",
-    "address": { "@type": "PostalAddress", "addressLocality": "Riyadh", "addressCountry": "SA" },
+    "address": { "@type": "PostalAddress", "streetAddress": "Ar Rayyan (PQ77+3F)", "addressLocality": "Riyadh", "addressCountry": "SA" },
+    "hasMap": "https://maps.app.goo.gl/xzbjt3mMCfxG6AF28",
     "areaServed": "SA",
     "description": "Sale and rental of generators, light towers, UPS and power distribution equipment in Riyadh, Saudi Arabia."
   }
@@ -78,6 +79,9 @@
 
   <!-- ===== Hero ===== -->
   <section class="hero">
+    <div class="hero-fx" aria-hidden="true">
+      <span class="orb o1"></span><span class="orb o2"></span><span class="orb o3"></span>
+    </div>
     <div class="container">
       <h1>
         <span data-ar>حلول طاقة موثوقة للبيع والتأجير في المملكة</span>
@@ -90,10 +94,14 @@
       <div class="hero-cta">
         <a class="btn btn-primary" href="#quote"><span data-ar>اطلب عرض سعر الآن</span><span data-en>Request a quote</span></a>
         <a class="btn btn-ghost" href="#products"><span data-ar>تصفّح المنتجات</span><span data-en>Browse products</span></a>
+        <button class="play-btn" data-video-open aria-label="Watch intro">
+          <span class="ring">▶</span>
+          <span data-ar>شاهد الفيديو التعريفي</span><span data-en>Watch intro</span>
+        </button>
       </div>
       <div class="hero-stats">
-        <div class="stat"><b>15+</b><span data-ar>سنة خبرة</span><span data-en>Years of experience</span></div>
-        <div class="stat"><b>500+</b><span data-ar>مشروع منفّذ</span><span data-en>Projects delivered</span></div>
+        <div class="stat"><b data-count="15" data-suffix="+">15+</b><span data-ar>سنة خبرة</span><span data-en>Years of experience</span></div>
+        <div class="stat"><b data-count="500" data-suffix="+">500+</b><span data-ar>مشروع منفّذ</span><span data-en>Projects delivered</span></div>
         <div class="stat"><b>24/7</b><span data-ar>دعم طوارئ</span><span data-en>Emergency support</span></div>
       </div>
     </div>
@@ -230,11 +238,11 @@
         </p>
       </div>
       <div class="contact-grid">
-        <iframe class="map-embed" loading="lazy" title="Power Solutions Equipment — Riyadh"
-          src="https://maps.google.com/maps?q=Riyadh%20Saudi%20Arabia&z=11&output=embed"
+        <iframe class="map-embed" loading="lazy" title="Power Solutions Equipment — Ar Rayyan, Riyadh"
+          src="https://maps.google.com/maps?q=PQ77%2B3F%20Ar%20Rayyan%20Riyadh&z=16&output=embed"
           referrerpolicy="no-referrer-when-downgrade"></iframe>
         <ul class="info-list">
-          <li><span class="ic">📍</span><div><b><span data-ar>العنوان</span><span data-en>Address</span></b><span data-ar>الرياض، المملكة العربية السعودية</span><span data-en>Riyadh, Saudi Arabia</span></div></li>
+          <li><span class="ic">📍</span><div><b><span data-ar>العنوان</span><span data-en>Address</span></b><a href="https://maps.app.goo.gl/xzbjt3mMCfxG6AF28" target="_blank" rel="noopener"><span data-ar>حي الريان، الرياض — PQ77+3F</span><span data-en>Ar Rayyan, Riyadh — PQ77+3F</span></a></div></li>
           <li><span class="ic">🕐</span><div><b><span data-ar>ساعات العمل</span><span data-en>Business hours</span></b><span data-ar>الأحد – الخميس: 8 صباحاً – 6 مساءً · دعم طوارئ 24/7</span><span data-en>Sun – Thu: 8 AM – 6 PM · 24/7 emergency support</span></div></li>
           <li><span class="ic">📞</span><div><b><span data-ar>الهاتف</span><span data-en>Phone</span></b><a href="tel:+966554557220">+966 55 455 7220</a><a href="tel:+966114003468">+966 11 400 3468</a></div></li>
           <li><span class="ic">✉️</span><div><b><span data-ar>البريد الإلكتروني</span><span data-en>Email</span></b><a href="mailto:info@powersolutions-sa.com">info@powersolutions-sa.com</a></div></li>
@@ -287,6 +295,63 @@
     <div class="footer-bottom">© 2026 Power Solutions Equipment. All rights reserved.</div>
   </footer>
 
+  <!-- ===== Intro video modal =====
+       Animated SVG motion-graphic (loops, no binary). To use a real clip instead,
+       drop assets/video/intro.mp4 and replace the <svg> with:
+       <video controls autoplay muted playsinline poster="assets/img/hero.svg">
+         <source src="assets/video/intro.mp4" type="video/mp4" />
+       </video>  -->
+  <div class="video-modal" data-video-modal aria-hidden="true">
+    <div class="video-box" role="dialog" aria-label="Intro video">
+      <button class="video-close" data-video-close aria-label="Close">&times;</button>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-label="Power Solutions intro">
+        <defs>
+          <linearGradient id="bgv" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#17191f"/><stop offset="1" stop-color="#3a0a0e"/>
+          </linearGradient>
+          <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+            <stop offset="0" stop-color="#ff5a5f" stop-opacity="0.55"/><stop offset="100%" stop-color="#ff5a5f" stop-opacity="0"/>
+          </radialGradient>
+          <pattern id="gridv" width="36" height="36" patternUnits="userSpaceOnUse">
+            <path d="M36 0H0V36" fill="none" stroke="#ffffff" stroke-opacity="0.05"/>
+          </pattern>
+        </defs>
+        <rect width="960" height="540" fill="url(#bgv)"/>
+        <rect width="960" height="540" fill="url(#gridv)"/>
+        <g fill="none" stroke-width="2.5" stroke-linecap="round">
+          <path d="M-40,130 C240,70 520,180 1000,110" stroke="#c8000a" stroke-opacity="0.55" stroke-dasharray="10 16">
+            <animate attributeName="stroke-dashoffset" from="0" to="-312" dur="3s" repeatCount="indefinite"/></path>
+          <path d="M-40,430 C260,500 560,380 1000,450" stroke="#ff5a5f" stroke-opacity="0.4" stroke-dasharray="8 18">
+            <animate attributeName="stroke-dashoffset" from="0" to="-260" dur="3.6s" repeatCount="indefinite"/></path>
+          <path d="M-40,280 C300,240 620,320 1000,270" stroke="#c8000a" stroke-opacity="0.25" stroke-dasharray="6 20">
+            <animate attributeName="stroke-dashoffset" from="0" to="-208" dur="4.4s" repeatCount="indefinite"/></path>
+        </g>
+        <circle cx="480" cy="205" r="120" fill="url(#glow)">
+          <animate attributeName="r" values="100;132;100" dur="3s" repeatCount="indefinite"/></circle>
+        <g transform="translate(437,120) scale(7)">
+          <path d="M13 2L4.5 13.5H11l-1 8.5 8.5-11.5H12l1-8.5z" fill="#ffffff">
+            <animate attributeName="opacity" values="1;0.55;1;0.8;1" dur="1.7s" repeatCount="indefinite"/></path>
+        </g>
+        <g text-anchor="middle" font-family="Inter, Arial, sans-serif">
+          <g>
+            <text x="480" y="418" fill="#fff" font-size="40" font-weight="800">POWER SOLUTIONS</text>
+            <text x="480" y="458" fill="#d9c7c9" font-size="22">شركة حلول الطاقة للمعدات</text>
+            <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.05;0.28;0.33;1" dur="9s" repeatCount="indefinite"/>
+          </g>
+          <g opacity="0">
+            <text x="480" y="432" fill="#fff" font-size="38" font-weight="800">Sale &amp; Rental · بيع وتأجير</text>
+            <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.34;0.4;0.6;0.66;1" dur="9s" repeatCount="indefinite"/>
+          </g>
+          <g opacity="0">
+            <text x="480" y="418" fill="#fff" font-size="30" font-weight="700">Generators · UPS · Light Towers</text>
+            <text x="480" y="456" fill="#ff8a8e" font-size="22" font-weight="700">24/7 Support · Riyadh</text>
+            <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.67;0.73;0.96;1" dur="9s" repeatCount="indefinite"/>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>
+
   <!-- Floating WhatsApp -->
   <a class="wa-float" data-wa="966554557220" target="_blank" rel="noopener" aria-label="WhatsApp">
     <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-.607z"/></svg>
@@ -295,5 +360,6 @@
   <script src="js/i18n.js"></script>
   <script src="js/products.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/motion.js"></script>
 </body>
 </html>

@@ -29,6 +29,7 @@
           </a>
         </article>`;
     }).join("");
+    if (window.PSE && window.PSE.scanReveal) window.PSE.scanReveal();
   }
 
   fetch("data/products.json")
