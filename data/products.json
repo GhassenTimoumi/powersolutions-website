@@ -1,0 +1,136 @@
+{
+  "company": {
+    "name_en": "Power Solutions Equipment",
+    "name_ar": "شركة حلول الطاقة للمعدات",
+    "short": "PSE",
+    "phone1": "0554557220",
+    "phone2": "0114003468",
+    "whatsapp": "966554557220",
+    "email": "info@powersolutions-sa.com",
+    "city_en": "Riyadh, Saudi Arabia",
+    "city_ar": "الرياض، المملكة العربية السعودية",
+    "domain": "https://powersolutions-sa.com"
+  },
+  "products": [
+    {
+      "slug": "generators",
+      "name_en": "Diesel Generators",
+      "name_ar": "مولدات الديزل",
+      "summary_en": "Reliable standby and prime power generators for projects, events and facilities.",
+      "summary_ar": "مولدات ديزل احتياطية ودائمة للمشاريع والفعاليات والمنشآت.",
+      "buy": true,
+      "rent": true,
+      "specs": [
+        { "key_en": "Power range", "key_ar": "نطاق القدرة", "val_en": "10 – 2500 kVA", "val_ar": "10 – 2500 كيلو فولت أمبير" },
+        { "key_en": "Fuel type", "key_ar": "نوع الوقود", "val_en": "Diesel", "val_ar": "ديزل" },
+        { "key_en": "Phases", "key_ar": "الأطوار", "val_en": "Single / Three phase", "val_ar": "أحادي / ثلاثي الطور" },
+        { "key_en": "Warranty", "key_ar": "الضمان", "val_en": "Up to 2 years", "val_ar": "حتى سنتين" }
+      ],
+      "image": "assets/img/generators.svg"
+    },
+    {
+      "slug": "light-towers",
+      "name_en": "Light Towers",
+      "name_ar": "أبراج الإضاءة",
+      "summary_en": "Mobile high-mast lighting for construction sites, roadworks and events.",
+      "summary_ar": "إضاءة متنقلة عالية للمواقع الإنشائية وأعمال الطرق والفعاليات.",
+      "buy": true,
+      "rent": true,
+      "specs": [
+        { "key_en": "Lighting", "key_ar": "الإضاءة", "val_en": "4 × LED floodlights", "val_ar": "4 كشافات LED" },
+        { "key_en": "Mast height", "key_ar": "ارتفاع الصاري", "val_en": "Up to 9 m", "val_ar": "حتى 9 أمتار" },
+        { "key_en": "Runtime", "key_ar": "مدة التشغيل", "val_en": "Up to 60 hrs", "val_ar": "حتى 60 ساعة" },
+        { "key_en": "Warranty", "key_ar": "الضمان", "val_en": "1 year", "val_ar": "سنة واحدة" }
+      ],
+      "image": "assets/img/light-towers.svg"
+    },
+    {
+      "slug": "power-distribution",
+      "name_en": "Power Distribution Equipment",
+      "name_ar": "معدات توزيع الطاقة",
+      "summary_en": "Distribution boards, cables and connectors for safe on-site power.",
+      "summary_ar": "لوحات توزيع وكابلات وموصلات لطاقة آمنة في الموقع.",
+      "buy": true,
+      "rent": true,
+      "specs": [
+        { "key_en": "Voltage", "key_ar": "الجهد", "val_en": "230 / 400 V", "val_ar": "230 / 400 فولت" },
+        { "key_en": "Protection", "key_ar": "الحماية", "val_en": "IP65 rated", "val_ar": "تصنيف IP65" },
+        { "key_en": "Warranty", "key_ar": "الضمان", "val_en": "1 year", "val_ar": "سنة واحدة" }
+      ],
+      "image": "assets/img/power-distribution.svg"
+    },
+    {
+      "slug": "ups",
+      "name_en": "UPS Systems",
+      "name_ar": "أنظمة UPS",
+      "summary_en": "Uninterruptible power supplies protecting critical loads from outages.",
+      "summary_ar": "أنظمة طاقة غير منقطعة تحمي الأحمال الحرجة من الانقطاعات.",
+      "buy": true,
+      "rent": false,
+      "specs": [
+        { "key_en": "Capacity", "key_ar": "السعة", "val_en": "1 – 500 kVA", "val_ar": "1 – 500 كيلو فولت أمبير" },
+        { "key_en": "Topology", "key_ar": "البنية", "val_en": "Online double-conversion", "val_ar": "تحويل مزدوج أونلاين" },
+        { "key_en": "Warranty", "key_ar": "الضمان", "val_en": "2 years", "val_ar": "سنتان" }
+      ],
+      "image": "assets/img/ups.svg"
+    },
+    {
+      "slug": "renewable-energy",
+      "name_en": "Renewable Energy Solutions",
+      "name_ar": "حلول الطاقة المتجددة",
+      "summary_en": "Solar and hybrid systems that cut fuel costs and emissions.",
+      "summary_ar": "أنظمة شمسية وهجينة تقلل تكاليف الوقود والانبعاثات.",
+      "buy": true,
+      "rent": false,
+      "specs": [
+        { "key_en": "Type", "key_ar": "النوع", "val_en": "Solar / Hybrid", "val_ar": "شمسي / هجين" },
+        { "key_en": "Scale", "key_ar": "النطاق", "val_en": "Residential to utility", "val_ar": "من المنزلي إلى المرافق" },
+        { "key_en": "Warranty", "key_ar": "الضمان", "val_en": "Up to 10 years", "val_ar": "حتى 10 سنوات" }
+      ],
+      "image": "assets/img/renewable-energy.svg"
+    },
+    {
+      "slug": "monitoring-control",
+      "name_en": "Monitoring & Control Systems",
+      "name_ar": "أنظمة المراقبة والتحكم",
+      "summary_en": "Remote monitoring of generators and power assets in real time.",
+      "summary_ar": "مراقبة عن بُعد للمولدات وأصول الطاقة في الوقت الفعلي.",
+      "buy": true,
+      "rent": false,
+      "specs": [
+        { "key_en": "Connectivity", "key_ar": "الاتصال", "val_en": "GSM / Ethernet", "val_ar": "GSM / إيثرنت" },
+        { "key_en": "Alerts", "key_ar": "التنبيهات", "val_en": "SMS / Email", "val_ar": "رسائل / بريد" },
+        { "key_en": "Warranty", "key_ar": "الضمان", "val_en": "1 year", "val_ar": "سنة واحدة" }
+      ],
+      "image": "assets/img/monitoring-control.svg"
+    },
+    {
+      "slug": "energy-management",
+      "name_en": "Energy Management",
+      "name_ar": "إدارة الطاقة",
+      "summary_en": "Load management and efficiency optimization to reduce running costs.",
+      "summary_ar": "إدارة الأحمال وتحسين الكفاءة لتقليل تكاليف التشغيل.",
+      "buy": true,
+      "rent": false,
+      "specs": [
+        { "key_en": "Focus", "key_ar": "التركيز", "val_en": "Efficiency & load balancing", "val_ar": "الكفاءة وموازنة الأحمال" },
+        { "key_en": "Reporting", "key_ar": "التقارير", "val_en": "Consumption analytics", "val_ar": "تحليلات الاستهلاك" }
+      ],
+      "image": "assets/img/energy-management.svg"
+    },
+    {
+      "slug": "custom-solutions",
+      "name_en": "Custom Solutions",
+      "name_ar": "حلول مخصصة",
+      "summary_en": "Tailored power packages engineered to your project requirements.",
+      "summary_ar": "باقات طاقة مصممة خصيصًا وفق متطلبات مشروعك.",
+      "buy": true,
+      "rent": true,
+      "specs": [
+        { "key_en": "Approach", "key_ar": "المنهجية", "val_en": "Engineered to spec", "val_ar": "هندسة حسب المواصفات" },
+        { "key_en": "Delivery", "key_ar": "التسليم", "val_en": "Turnkey", "val_ar": "تسليم مفتاح" }
+      ],
+      "image": "assets/img/custom-solutions.svg"
+    }
+  ]
+}
