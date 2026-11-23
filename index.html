@@ -81,6 +81,28 @@
   <section class="hero">
     <div class="hero-fx" aria-hidden="true">
       <span class="orb o1"></span><span class="orb o2"></span><span class="orb o3"></span>
+      <svg class="hero-anim" viewBox="0 0 1440 760" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <path id="l1" d="M-60,180 C360,90 820,250 1520,150"/>
+          <path id="l2" d="M-60,470 C320,560 820,360 1520,470"/>
+          <path id="l3" d="M-60,330 C420,280 900,400 1520,320"/>
+          <path id="l4" d="M-60,620 C380,660 900,540 1520,640"/>
+        </defs>
+        <g fill="none" stroke-width="2" stroke-linecap="round">
+          <use href="#l1" stroke="#ff5a5f" stroke-opacity="0.38" stroke-dasharray="10 18">
+            <animate attributeName="stroke-dashoffset" from="0" to="-336" dur="3s" repeatCount="indefinite"/></use>
+          <use href="#l2" stroke="#c8000a" stroke-opacity="0.32" stroke-dasharray="8 20">
+            <animate attributeName="stroke-dashoffset" from="0" to="-280" dur="3.8s" repeatCount="indefinite"/></use>
+          <use href="#l3" stroke="#ff8a8e" stroke-opacity="0.2" stroke-dasharray="6 22">
+            <animate attributeName="stroke-dashoffset" from="0" to="-224" dur="4.6s" repeatCount="indefinite"/></use>
+          <use href="#l4" stroke="#c8000a" stroke-opacity="0.18" stroke-dasharray="6 24">
+            <animate attributeName="stroke-dashoffset" from="0" to="-240" dur="5.2s" repeatCount="indefinite"/></use>
+        </g>
+        <!-- traveling "power pulses" -->
+        <circle r="5" fill="#fff" opacity="0.9"><animateMotion dur="3s" repeatCount="indefinite"><mpath href="#l1"/></animateMotion></circle>
+        <circle r="4" fill="#ff8a8e"><animateMotion dur="3.8s" repeatCount="indefinite" begin="-1s"><mpath href="#l2"/></animateMotion></circle>
+        <circle r="4" fill="#fff" opacity="0.8"><animateMotion dur="4.6s" repeatCount="indefinite" begin="-2s"><mpath href="#l3"/></animateMotion></circle>
+      </svg>
     </div>
     <div class="container">
       <h1>
@@ -94,10 +116,6 @@
       <div class="hero-cta">
         <a class="btn btn-primary" href="#quote"><span data-ar>اطلب عرض سعر الآن</span><span data-en>Request a quote</span></a>
         <a class="btn btn-ghost" href="#products"><span data-ar>تصفّح المنتجات</span><span data-en>Browse products</span></a>
-        <button class="play-btn" data-video-open aria-label="Watch intro">
-          <span class="ring">▶</span>
-          <span data-ar>شاهد الفيديو التعريفي</span><span data-en>Watch intro</span>
-        </button>
       </div>
       <div class="hero-stats">
         <div class="stat"><b data-count="15" data-suffix="+">15+</b><span data-ar>سنة خبرة</span><span data-en>Years of experience</span></div>
@@ -150,12 +168,12 @@
         </p>
       </div>
       <div class="grid cols-3">
-        <figure class="gallery-item"><img src="assets/img/project-1.svg" alt="Data center standby power" loading="lazy" /><figcaption class="caption"><span data-ar>طاقة احتياطية لمركز بيانات</span><span data-en>Data Center Standby Power</span></figcaption></figure>
-        <figure class="gallery-item"><img src="assets/img/project-2.svg" alt="Airport light towers" loading="lazy" /><figcaption class="caption"><span data-ar>أبراج إضاءة لمطار</span><span data-en>Airport Light Towers</span></figcaption></figure>
-        <figure class="gallery-item"><img src="assets/img/project-3.svg" alt="Hospital UPS backup" loading="lazy" /><figcaption class="caption"><span data-ar>نظام UPS احتياطي لمستشفى</span><span data-en>Hospital UPS Backup</span></figcaption></figure>
-        <figure class="gallery-item"><img src="assets/img/project-4.svg" alt="Construction site power" loading="lazy" /><figcaption class="caption"><span data-ar>تغذية كهربائية لموقع إنشائي</span><span data-en>Construction Site Power</span></figcaption></figure>
-        <figure class="gallery-item"><img src="assets/img/project-5.svg" alt="Event power rental" loading="lazy" /><figcaption class="caption"><span data-ar>تأجير طاقة لفعالية</span><span data-en>Event Power Rental</span></figcaption></figure>
-        <figure class="gallery-item"><img src="assets/img/project-6.svg" alt="Solar hybrid plant" loading="lazy" /><figcaption class="caption"><span data-ar>محطة هجينة بالطاقة الشمسية</span><span data-en>Solar Hybrid Plant</span></figcaption></figure>
+        <figure class="gallery-item"><img src="assets/img/project-1.jpg" alt="Data center standby power" loading="lazy" /><figcaption class="caption"><span data-ar>طاقة احتياطية لمركز بيانات</span><span data-en>Data Center Standby Power</span></figcaption></figure>
+        <figure class="gallery-item"><img src="assets/img/project-2.jpg" alt="Airport light towers" loading="lazy" /><figcaption class="caption"><span data-ar>أبراج إضاءة لمطار</span><span data-en>Airport Light Towers</span></figcaption></figure>
+        <figure class="gallery-item"><img src="assets/img/project-3.jpg" alt="Hospital UPS backup" loading="lazy" /><figcaption class="caption"><span data-ar>نظام UPS احتياطي لمستشفى</span><span data-en>Hospital UPS Backup</span></figcaption></figure>
+        <figure class="gallery-item"><img src="assets/img/project-4.jpg" alt="Construction site power" loading="lazy" /><figcaption class="caption"><span data-ar>تغذية كهربائية لموقع إنشائي</span><span data-en>Construction Site Power</span></figcaption></figure>
+        <figure class="gallery-item"><img src="assets/img/project-5.jpg" alt="Event power rental" loading="lazy" /><figcaption class="caption"><span data-ar>تأجير طاقة لفعالية</span><span data-en>Event Power Rental</span></figcaption></figure>
+        <figure class="gallery-item"><img src="assets/img/project-6.jpg" alt="Solar hybrid plant" loading="lazy" /><figcaption class="caption"><span data-ar>محطة هجينة بالطاقة الشمسية</span><span data-en>Solar Hybrid Plant</span></figcaption></figure>
       </div>
     </div>
   </section>
@@ -251,7 +269,7 @@
             <div style="width:100%">
               <b><span data-ar>تابعنا</span><span data-en>Follow us</span></b>
               <div class="social-row" style="margin-top:8px">
-                <a href="https://wa.me/966554557220" target="_blank" rel="noopener" aria-label="WhatsApp" style="background:#25d366"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-.607z"/></svg></a>
+                <a href="https://wa.me/966554557220" target="_blank" rel="noopener" aria-label="WhatsApp" style="background:#25d366"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
                 <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn" style="background:#0a66c2"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14zM8.34 18.34V9.9H5.67v8.44h2.67zM7 8.73a1.55 1.55 0 100-3.1 1.55 1.55 0 000 3.1zm11.34 9.61v-4.63c0-2.47-1.32-3.62-3.08-3.62-1.42 0-2.06.78-2.41 1.33v-1.14h-2.67c.04.75 0 8.44 0 8.44h2.67v-4.71c0-.24.02-.48.09-.65.19-.48.63-.98 1.37-.98.97 0 1.36.74 1.36 1.82v4.52h2.67z"/></svg></a>
                 <a href="#" target="_blank" rel="noopener" aria-label="Instagram" style="background:#e4405f"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.43.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.43.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.81 3.81 0 01-1.38-.9 3.81 3.81 0 01-.9-1.38c-.16-.43-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.43-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0 1.8c-3.15 0-3.52.01-4.76.07-.9.04-1.38.19-1.71.32-.43.17-.74.37-1.06.69-.32.32-.52.63-.69 1.06-.13.33-.28.81-.32 1.71-.06 1.24-.07 1.61-.07 4.76s.01 3.52.07 4.76c.04.9.19 1.38.32 1.71.17.43.37.74.69 1.06.32.32.63.52 1.06.69.33.13.81.28 1.71.32 1.24.06 1.61.07 4.76.07s3.52-.01 4.76-.07c.9-.04 1.38-.19 1.71-.32.43-.17.74-.37 1.06-.69.32-.32.52-.63.69-1.06.13-.33.28-.81.32-1.71.06-1.24.07-1.61.07-4.76s-.01-3.52-.07-4.76c-.04-.9-.19-1.38-.32-1.71a2.85 2.85 0 00-.69-1.06 2.85 2.85 0 00-1.06-.69c-.33-.13-.81-.28-1.71-.32-1.24-.06-1.61-.07-4.76-.07zm0 3.06a4.98 4.98 0 110 9.96 4.98 4.98 0 010-9.96zm0 8.21a3.23 3.23 0 100-6.46 3.23 3.23 0 000 6.46zm6.34-8.41a1.16 1.16 0 11-2.32 0 1.16 1.16 0 012.32 0z"/></svg></a>
                 <a href="#" target="_blank" rel="noopener" aria-label="X" style="background:#000"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.5 8.57L23 22h-6.9l-5.4-7.06L4.5 22H1.4l8-9.17L1 2h7.06l4.9 6.48L18.9 2zm-1.2 18h1.7L7.4 3.8H5.6L17.7 20z"/></svg></a>
@@ -273,7 +291,7 @@
           <span data-en>Sale and rental of generators and power equipment in Riyadh, Saudi Arabia.</span>
         </p>
         <div class="social-row">
-          <a href="https://wa.me/966554557220" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-.607z"/></svg></a>
+          <a href="https://wa.me/966554557220" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
           <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14zM8.34 18.34V9.9H5.67v8.44h2.67zM7 8.73a1.55 1.55 0 100-3.1 1.55 1.55 0 000 3.1zm11.34 9.61v-4.63c0-2.47-1.32-3.62-3.08-3.62-1.42 0-2.06.78-2.41 1.33v-1.14h-2.67c.04.75 0 8.44 0 8.44h2.67v-4.71c0-.24.02-.48.09-.65.19-.48.63-.98 1.37-.98.97 0 1.36.74 1.36 1.82v4.52h2.67z"/></svg></a>
           <a href="#" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.43.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.43.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.81 3.81 0 01-1.38-.9 3.81 3.81 0 01-.9-1.38c-.16-.43-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.43-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0 1.8c-3.15 0-3.52.01-4.76.07-.9.04-1.38.19-1.71.32-.43.17-.74.37-1.06.69-.32.32-.52.63-.69 1.06-.13.33-.28.81-.32 1.71-.06 1.24-.07 1.61-.07 4.76s.01 3.52.07 4.76c.04.9.19 1.38.32 1.71.17.43.37.74.69 1.06.32.32.63.52 1.06.69.33.13.81.28 1.71.32 1.24.06 1.61.07 4.76.07s3.52-.01 4.76-.07c.9-.04 1.38-.19 1.71-.32.43-.17.74-.37 1.06-.69.32-.32.52-.63.69-1.06.13-.33.28-.81.32-1.71.06-1.24.07-1.61.07-4.76s-.01-3.52-.07-4.76c-.04-.9-.19-1.38-.32-1.71a2.85 2.85 0 00-.69-1.06 2.85 2.85 0 00-1.06-.69c-.33-.13-.81-.28-1.71-.32-1.24-.06-1.61-.07-4.76-.07zm0 3.06a4.98 4.98 0 110 9.96 4.98 4.98 0 010-9.96zm0 8.21a3.23 3.23 0 100-6.46 3.23 3.23 0 000 6.46zm6.34-8.41a1.16 1.16 0 11-2.32 0 1.16 1.16 0 012.32 0z"/></svg></a>
           <a href="#" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.5 8.57L23 22h-6.9l-5.4-7.06L4.5 22H1.4l8-9.17L1 2h7.06l4.9 6.48L18.9 2zm-1.2 18h1.7L7.4 3.8H5.6L17.7 20z"/></svg></a>
@@ -295,66 +313,9 @@
     <div class="footer-bottom">© 2026 Power Solutions Equipment. All rights reserved.</div>
   </footer>
 
-  <!-- ===== Intro video modal =====
-       Animated SVG motion-graphic (loops, no binary). To use a real clip instead,
-       drop assets/video/intro.mp4 and replace the <svg> with:
-       <video controls autoplay muted playsinline poster="assets/img/hero.svg">
-         <source src="assets/video/intro.mp4" type="video/mp4" />
-       </video>  -->
-  <div class="video-modal" data-video-modal aria-hidden="true">
-    <div class="video-box" role="dialog" aria-label="Intro video">
-      <button class="video-close" data-video-close aria-label="Close">&times;</button>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-label="Power Solutions intro">
-        <defs>
-          <linearGradient id="bgv" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#17191f"/><stop offset="1" stop-color="#3a0a0e"/>
-          </linearGradient>
-          <radialGradient id="glow" cx="50%" cy="50%" r="50%">
-            <stop offset="0" stop-color="#ff5a5f" stop-opacity="0.55"/><stop offset="100%" stop-color="#ff5a5f" stop-opacity="0"/>
-          </radialGradient>
-          <pattern id="gridv" width="36" height="36" patternUnits="userSpaceOnUse">
-            <path d="M36 0H0V36" fill="none" stroke="#ffffff" stroke-opacity="0.05"/>
-          </pattern>
-        </defs>
-        <rect width="960" height="540" fill="url(#bgv)"/>
-        <rect width="960" height="540" fill="url(#gridv)"/>
-        <g fill="none" stroke-width="2.5" stroke-linecap="round">
-          <path d="M-40,130 C240,70 520,180 1000,110" stroke="#c8000a" stroke-opacity="0.55" stroke-dasharray="10 16">
-            <animate attributeName="stroke-dashoffset" from="0" to="-312" dur="3s" repeatCount="indefinite"/></path>
-          <path d="M-40,430 C260,500 560,380 1000,450" stroke="#ff5a5f" stroke-opacity="0.4" stroke-dasharray="8 18">
-            <animate attributeName="stroke-dashoffset" from="0" to="-260" dur="3.6s" repeatCount="indefinite"/></path>
-          <path d="M-40,280 C300,240 620,320 1000,270" stroke="#c8000a" stroke-opacity="0.25" stroke-dasharray="6 20">
-            <animate attributeName="stroke-dashoffset" from="0" to="-208" dur="4.4s" repeatCount="indefinite"/></path>
-        </g>
-        <circle cx="480" cy="205" r="120" fill="url(#glow)">
-          <animate attributeName="r" values="100;132;100" dur="3s" repeatCount="indefinite"/></circle>
-        <g transform="translate(437,120) scale(7)">
-          <path d="M13 2L4.5 13.5H11l-1 8.5 8.5-11.5H12l1-8.5z" fill="#ffffff">
-            <animate attributeName="opacity" values="1;0.55;1;0.8;1" dur="1.7s" repeatCount="indefinite"/></path>
-        </g>
-        <g text-anchor="middle" font-family="Inter, Arial, sans-serif">
-          <g>
-            <text x="480" y="418" fill="#fff" font-size="40" font-weight="800">POWER SOLUTIONS</text>
-            <text x="480" y="458" fill="#d9c7c9" font-size="22">شركة حلول الطاقة للمعدات</text>
-            <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.05;0.28;0.33;1" dur="9s" repeatCount="indefinite"/>
-          </g>
-          <g opacity="0">
-            <text x="480" y="432" fill="#fff" font-size="38" font-weight="800">Sale &amp; Rental · بيع وتأجير</text>
-            <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.34;0.4;0.6;0.66;1" dur="9s" repeatCount="indefinite"/>
-          </g>
-          <g opacity="0">
-            <text x="480" y="418" fill="#fff" font-size="30" font-weight="700">Generators · UPS · Light Towers</text>
-            <text x="480" y="456" fill="#ff8a8e" font-size="22" font-weight="700">24/7 Support · Riyadh</text>
-            <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.67;0.73;0.96;1" dur="9s" repeatCount="indefinite"/>
-          </g>
-        </g>
-      </svg>
-    </div>
-  </div>
-
   <!-- Floating WhatsApp -->
   <a class="wa-float" data-wa="966554557220" target="_blank" rel="noopener" aria-label="WhatsApp">
-    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-.607z"/></svg>
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
 
   <script src="js/i18n.js"></script>

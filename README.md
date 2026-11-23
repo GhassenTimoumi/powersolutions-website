@@ -50,3 +50,10 @@ python3 -m http.server 8080
 git init && git add . && git commit -m "Initial PSE website"
 # push to a repo, then enable Pages on the main branch root
 ```
+
+## Image credits
+Product/project photos are fetched from **Wikimedia Commons** (CC / public-domain) by
+`scripts/fetch-images.py`, cropped to 4:3 JPEGs in `assets/img/`. They are placeholders
+with real subjects — before production, verify each file's license/attribution on Commons
+or replace with the client's own photography. Re-run: `python3 scripts/fetch-images.py`.
+The hero/favicon remain generated SVGs (`scripts/gen-placeholders.mjs`).

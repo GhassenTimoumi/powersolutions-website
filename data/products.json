@@ -26,7 +26,7 @@
         { "key_en": "Phases", "key_ar": "الأطوار", "val_en": "Single / Three phase", "val_ar": "أحادي / ثلاثي الطور" },
         { "key_en": "Warranty", "key_ar": "الضمان", "val_en": "Up to 2 years", "val_ar": "حتى سنتين" }
       ],
-      "image": "assets/img/generators.svg"
+      "image": "assets/img/generators.jpg"
     },
     {
       "slug": "light-towers",
@@ -42,7 +42,7 @@
         { "key_en": "Runtime", "key_ar": "مدة التشغيل", "val_en": "Up to 60 hrs", "val_ar": "حتى 60 ساعة" },
         { "key_en": "Warranty", "key_ar": "الضمان", "val_en": "1 year", "val_ar": "سنة واحدة" }
       ],
-      "image": "assets/img/light-towers.svg"
+      "image": "assets/img/light-towers.jpg"
     },
     {
       "slug": "power-distribution",
@@ -57,7 +57,7 @@
         { "key_en": "Protection", "key_ar": "الحماية", "val_en": "IP65 rated", "val_ar": "تصنيف IP65" },
         { "key_en": "Warranty", "key_ar": "الضمان", "val_en": "1 year", "val_ar": "سنة واحدة" }
       ],
-      "image": "assets/img/power-distribution.svg"
+      "image": "assets/img/power-distribution.jpg"
     },
     {
       "slug": "ups",
@@ -72,7 +72,7 @@
         { "key_en": "Topology", "key_ar": "البنية", "val_en": "Online double-conversion", "val_ar": "تحويل مزدوج أونلاين" },
         { "key_en": "Warranty", "key_ar": "الضمان", "val_en": "2 years", "val_ar": "سنتان" }
       ],
-      "image": "assets/img/ups.svg"
+      "image": "assets/img/ups.jpg"
     },
     {
       "slug": "renewable-energy",
@@ -87,7 +87,7 @@
         { "key_en": "Scale", "key_ar": "النطاق", "val_en": "Residential to utility", "val_ar": "من المنزلي إلى المرافق" },
         { "key_en": "Warranty", "key_ar": "الضمان", "val_en": "Up to 10 years", "val_ar": "حتى 10 سنوات" }
       ],
-      "image": "assets/img/renewable-energy.svg"
+      "image": "assets/img/renewable-energy.jpg"
     },
     {
       "slug": "monitoring-control",
@@ -102,7 +102,7 @@
         { "key_en": "Alerts", "key_ar": "التنبيهات", "val_en": "SMS / Email", "val_ar": "رسائل / بريد" },
         { "key_en": "Warranty", "key_ar": "الضمان", "val_en": "1 year", "val_ar": "سنة واحدة" }
       ],
-      "image": "assets/img/monitoring-control.svg"
+      "image": "assets/img/monitoring-control.jpg"
     },
     {
       "slug": "energy-management",
@@ -116,7 +116,7 @@
         { "key_en": "Focus", "key_ar": "التركيز", "val_en": "Efficiency & load balancing", "val_ar": "الكفاءة وموازنة الأحمال" },
         { "key_en": "Reporting", "key_ar": "التقارير", "val_en": "Consumption analytics", "val_ar": "تحليلات الاستهلاك" }
       ],
-      "image": "assets/img/energy-management.svg"
+      "image": "assets/img/energy-management.jpg"
     },
     {
       "slug": "custom-solutions",
@@ -130,7 +130,7 @@
         { "key_en": "Approach", "key_ar": "المنهجية", "val_en": "Engineered to spec", "val_ar": "هندسة حسب المواصفات" },
         { "key_en": "Delivery", "key_ar": "التسليم", "val_en": "Turnkey", "val_ar": "تسليم مفتاح" }
       ],
-      "image": "assets/img/custom-solutions.svg"
+      "image": "assets/img/custom-solutions.jpg"
     }
   ]
 }
