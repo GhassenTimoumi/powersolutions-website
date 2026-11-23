@@ -9,25 +9,30 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 IMG = os.path.join(ROOT, "assets", "img")
 UA = "PSE-site-image-fetch/1.0 (https://powersolutions-sa.com; info@powersolutions-sa.com)"
 SKIP = ("diagram","map","chart","graph","logo","icon","seal","flag","coat","plan",
-        "drawing","schematic","poster","screenshot","label","symbol",".svg","svg")
+        "drawing","schematic","poster","screenshot","label","symbol",".svg","svg",
+        "landsat","satellite","iss-","aerial","from space","sentinel","topograph",
+        "pride","parade","stamp","banknote","portrait")
+USED = set()  # dedupe Commons titles across items
 
+# Equipment = topical (location-neutral); KSA terms only where they yield real matches.
+# Project scenes = Saudi-first so the gallery reads as KSA.
 PRODUCTS = {
-    "generators": "diesel generator set",
-    "light-towers": "mobile light tower",
-    "power-distribution": "electrical switchgear",
-    "ups": "uninterruptible power supply",
-    "renewable-energy": "solar power plant",
-    "monitoring-control": "power plant control room",
-    "energy-management": "electrical substation",
-    "custom-solutions": "containerised generator",
+    "generators": ["diesel generator set", "power generator caterpillar"],
+    "light-towers": ["mobile light tower", "construction light tower"],
+    "power-distribution": ["electrical switchgear", "power distribution panel"],
+    "ups": ["uninterruptible power supply", "UPS battery room"],
+    "renewable-energy": ["KAPSARC solar Riyadh", "Saudi Arabia solar power", "solar power plant"],
+    "monitoring-control": ["electrical control panel", "power plant control room"],
+    "energy-management": ["Saudi Arabia power station", "electrical substation"],
+    "custom-solutions": ["containerised generator", "portable power generator"],
 }
 PROJECTS = {
-    "project-1": "data center server room",
-    "project-2": "stadium floodlights night",
-    "project-3": "hospital building exterior",
-    "project-4": "construction site crane",
-    "project-5": "outdoor concert stage",
-    "project-6": "solar panels array",
+    "project-1": ["Riyadh skyline", "King Abdullah Financial District", "Kingdom Centre Riyadh"],
+    "project-2": ["King Fahd International Stadium", "Riyadh night skyline"],
+    "project-3": ["King Fahad Medical City", "King Faisal Specialist Hospital", "hospital Riyadh"],
+    "project-4": ["King Abdullah Financial District construction", "Riyadh construction site", "construction crane"],
+    "project-5": ["Riyadh Boulevard", "Jeddah corniche", "Riyadh Season"],
+    "project-6": ["Saudi Arabia solar farm", "Sudair solar", "solar panels array"],
 }
 
 def get(url, binary=False, timeout=25):
@@ -78,6 +83,7 @@ def try_commons(name, query):
         mime = ii.get("mime",""); url = ii.get("thumburl") or ii.get("url")
         if mime not in ("image/jpeg","image/png") or not url: continue
         tl = title.lower()
+        if title in USED: continue
         if any(s in tl for s in SKIP): continue
         tw, th = ii.get("thumbwidth",0), ii.get("thumbheight",0)
         if tw and th and tw < th*0.85: continue   # skip portrait
@@ -85,6 +91,7 @@ def try_commons(name, query):
             im = Image.open(io.BytesIO(get(url, binary=True)))
             if im.size[0] < 500: continue
             save(im, name)
+            USED.add(title)
             return title.replace("File:","")
         except Exception:
             continue
@@ -97,14 +104,18 @@ def fallback(name):
 
 def main():
     items = list(PRODUCTS.items()) + list(PROJECTS.items())
-    for name, query in items:
-        src = None
-        try: src = try_commons(name, query)
-        except Exception as e: print(f"  commons error {name}: {e}", file=sys.stderr)
+    for name, queries in items:
+        src = None; used = None
+        for q in queries:
+            try:
+                src = try_commons(name, q)
+            except Exception as e:
+                print(f"  commons error {name} '{q}': {e}", file=sys.stderr); src = None
+            if src: used = q; break
         if not src:
             try: src = fallback(name)
             except Exception as e: src = f"FAILED ({e})"
-        print(f"{name:20s} <- {src}")
+        print(f"{name:20s} [{used or 'fallback'}] <- {src}")
 
 if __name__ == "__main__":
     main()
